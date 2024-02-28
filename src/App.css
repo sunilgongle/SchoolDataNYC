@@ -1,4 +1,8 @@
-.data-container{
+.data-container {
   height: 65vh;
   overflow: auto;
+}
+.details-table-row :hover {
+  background-color: lightgray;
+  cursor: pointer;
 }

@@ -39,7 +39,7 @@ function App() {
           <tbody>
             {datas.map((details) => {
               return (
-                <tr
+                <tr class="details-table-row"
                   onClick={() =>
                     displayOverviewdata(details.overview_paragraph)
                   }
