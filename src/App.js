@@ -5,8 +5,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [data, setData] = useState([]);
-  const [overviewParagraph, setOverviewParagraph] = useState('');
-
+  const [overviewParagraph, setOverviewParagraph] = useState("");
 
   //fetchng the data while component mounts to the DOM
   useEffect(() => {
@@ -39,7 +38,8 @@ function App() {
           <tbody>
             {datas.map((details) => {
               return (
-                <tr class="details-table-row"
+                <tr
+                  class="details-table-row"
                   onClick={() =>
                     displayOverviewdata(details.overview_paragraph)
                   }
@@ -68,17 +68,14 @@ function App() {
         <br />
         {displaySchoolData(data)}
       </div>
-{overviewParagraph &&
-      <p> 
-        <b> Overview paragraph</b>
-        <p> {overviewParagraph} </p>
-      </p>
-}
+      {overviewParagraph && (
+        <p>
+          <b> Overview paragraph</b>
+          <p> {overviewParagraph} </p>
+        </p>
+      )}
     </>
   );
 }
 
 export default App;
-
-
-
